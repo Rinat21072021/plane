@@ -1,0 +1,12 @@
+body {
+  Font-family: 'Inter',sans-serif;
+  Font-size: 20px;
+  Line-height: 30px;
+  color:#636060;
+  //@extend %quicksand-500
+}
+
+.container {
+  max-width: 1267px;
+  margin: 0 auto;
+}
