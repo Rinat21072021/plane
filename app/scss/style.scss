@@ -31,7 +31,7 @@
   color: $color-title;
 }
 
-.menu__list-link + .menu__list-link {
+.menu__list-item + .menu__list-item {
   margin-left: 46px;
 }
 
@@ -39,8 +39,11 @@
   display: flex;
   justify-content: space-between;
   align-content: center;
-  margin-top: 98px;
+  padding: 0 0 94px;
+}
 
+.leafs-img {
+  margin-top: -30px;
 }
 
 .header__description {
@@ -71,6 +74,7 @@
 
   .header__description-btn {
     max-width: 158px;
+    height: 44px;
     border-radius: 10px;
     border: 2px solid $color-title
   }
@@ -135,6 +139,13 @@
     color: $color-text
   }
 
+  .project__inner-filter-list{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap:wrap;
+    align-items: center;
+  }
+
   .project__inner-filter-btn {
     width: 161px;
     height: 50px;
@@ -161,7 +172,6 @@
 .project__inner-item {
   text-align: center;
   margin-bottom: 50px;
-  border: 1px solid #717171;
 
   .img-1 {
   }
@@ -173,12 +183,14 @@
     font-weight: 700;
     font-size: 20px;
     line-height: 20px;
+    margin-bottom: 10px;
     color: $color-title;
   }
 
   .project__inner-item-description {
     border: 1px solid #E3E1D5;
     border-radius: 0 0 20px 20px;
+    padding-bottom: 36px
   }
 
   .project__inner-item-text {
@@ -266,6 +278,7 @@
     left: 1169px;
     top: 181.01px;
     background: #FFFFFF;
+    color: $color-title;;
     border: 1px solid #E06733;
     border-radius: 5px;
     margin-bottom: 38px;
@@ -285,12 +298,13 @@
     padding-top: 7px;
     color: $color-text;
   }
-  .contact__inner-city{
+
+  .contact__inner-city {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-top: 95px;
-    width:450px;
+    width: 450px;
     height: 50px;
     left: 61.18%;
     right: 7.57%;
@@ -299,29 +313,35 @@
     box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 0;
   }
-  .city{
+
+  .city {
     margin-left: 20px;
   }
-  .contact__inner-accordion-img{
+
+  .contact__inner-accordion-img {
     margin-right: 17px;
   }
 }
-.footer__inner{
+
+.footer__inner {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 40px 0;
 }
-.footer__inner-copy-lists{
+
+.footer__inner-copy-lists {
   display: flex;
-  .footer__inner-copy-item + .footer__inner-copy-item{
+
+  .footer__inner-copy-item + .footer__inner-copy-item {
     margin-left: 20px;
   }
 }
 
-.footer-inner__social-list{
+.footer-inner__social-list {
   display: flex;
-  .footer-inner__social-item + .footer-inner__social-item{
+
+  .footer-inner__social-item + .footer-inner__social-item {
     margin-left: 30px;
   }
 }
