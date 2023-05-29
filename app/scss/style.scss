@@ -1,7 +1,8 @@
+@import "_reset";
+@import "_fonts";
 @import "vars";
-@import "fonts";
-@import "reset";
 @import "global";
+
 
 .header {
   background-color: $bg;
@@ -48,7 +49,7 @@
 
 .header__description {
   display: flex;
-  max-width: 550px;
+  width: 550px;
   flex-direction: column;
 
   .header__description-title {
@@ -106,6 +107,7 @@
   }
 
   .about__inner-text {
+
     font-family: 'Inter', sans-serif;
     font-style: normal;
     font-weight: 400;
@@ -139,10 +141,10 @@
     color: $color-text
   }
 
-  .project__inner-filter-list{
+  .project__inner-filter-list {
     display: flex;
     justify-content: space-between;
-    flex-wrap:wrap;
+    flex-wrap: wrap;
     align-items: center;
   }
 
@@ -204,40 +206,35 @@
 }
 
 .prices__inner {
+  display: flex;
+  justify-content: space-between;
   padding: 40px 0 115px;
+
 }
 
-.prices__inner-title {
-  display: flex;
-  justify-content: space-between;
-
-  .prise__inner-right,
-  .prices__inner-left {
-    font-family: 'Inter', sans-serif;
-    font-style: normal;
-    font-weight: 700;
-    font-size: 40px;
-    line-height: 48px;
-    color: #000000;
-  }
-
-  .prise__inner-right {
-    width: 452px;
-
-    .title-word {
-      color: $color-text
-    }
-  }
+.prices__inner-right-title,
+.prices__inner-left-title {
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 48px;
+  color: #000000;
 }
 
-.prices__inner-content {
+.prices__inner-left {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+
+  .prices__inner-left-title {
+    padding-bottom: 60px;
+  }
 }
 
 .prices__inner-lists-btn {
   display: flex;
   flex-direction: column;
+  width: 332px;
   padding: 40px 34px;
   border: 1px solid #E3E1D5;
   border-radius: 20px;
@@ -266,22 +263,32 @@
   }
 }
 
-.prices__inner-contact {
-  padding-top: 38px;
+.prices__inner-right {
   display: flex;
   flex-direction: column;
-  align-content: space-between;
+  align-items: flex-end;
 
-  .price__inner-contact-us {
+  .prices__inner-right-title {
+    width: 452px;
+    text-align: end;
+  }
+
+  .prices__inner-contact-us {
     width: 162px;
     height: 50px;
-    left: 1169px;
-    top: 181.01px;
-    background: #FFFFFF;
-    color: $color-title;;
-    border: 1px solid #E06733;
+    margin: 38px 0 51px;
+    border: 1px solid $color-title;
+    color: $color-title;
     border-radius: 5px;
-    margin-bottom: 38px;
+    background-color: #ffffff;
+  }
+
+  .title-word {
+    color: $color-text
+  }
+
+  .prices__inner-img {
+    width: 152px;
   }
 }
 
@@ -346,4 +353,327 @@
   }
 }
 
-@import "media";
+@media (max-width: 1065px) {
+  .container {
+    width: 85%;
+  }
+  .about__inner {
+    flex-direction: column;
+  }
+}
+
+@media(max-width: 768px) {
+
+  .header__menu {
+    padding: 35px 0;
+  }
+
+  .header__bottom {
+    flex-direction: row-reverse;
+    padding: 40px 0 70px;
+
+    .leafs-img {
+      width: 280px;
+    }
+
+    .header__description-title {
+      width: 340px;
+      font-weight: 700;
+      font-size: 35px;
+      line-height: 50px;
+    }
+
+    .header__description-text {
+
+      margin: 30px 0 30px;
+    }
+
+  }
+
+  .about__inner-content {
+
+    .about__inner-title {
+      margin: 0 auto;
+      width: 423px;
+      font-size: 35px;
+      line-height: 46px;
+      text-align: center
+    }
+
+    .about__inner-text {
+      width: 330px;
+      margin: 0 auto;
+    }
+
+
+    .about__img-houseplant {
+      width: 250px;
+    }
+  }
+
+  .project__inner-filter {
+    flex-wrap: wrap;
+
+    .project__inner-title {
+      padding: 0 0 40px;
+      font-size: 35px;
+      line-height: 46px;
+    }
+  }
+
+  .project__inner-item {
+    width: 280px;
+  }
+
+  .project__inner-item-description {
+    .project__inner-item-title {
+      font-size: 20px;
+      line-height: 20px;
+    }
+  }
+
+  .prices__inner {
+    padding-bottom: 88px;
+  }
+
+  .prices__inner-right {
+    .prices__inner-right-title {
+      margin-top: 100px;
+      width: 296px;
+      font-size: 25px;
+      line-height: 35px;
+    }
+  }
+
+  .contact__inner {
+    padding: 40px 0 0;
+    flex-direction: column-reverse;
+    align-items: center;
+
+    .contact__inner__woman {
+      width: 200px;
+    }
+
+    .contact__inner-title {
+      order: 1;
+      margin-bottom: 100px;
+    }
+
+    .contact__inner-city {
+      margin-bottom: 250px;
+    }
+  }
+
+  .footer__inner {
+    flex-direction: column;
+    align-items: center;
+
+    .footer__inner-copy-lists {
+      padding-bottom: 16px;
+    }
+
+    .footer__inner-title {
+      padding-bottom: 27px;
+    }
+  }
+}
+
+@media(max-width: 650px) {
+
+  .menu {
+    .menu__lists {
+      display: none;
+    }
+  }
+
+  .header__bottom {
+    padding: 0 0 20px;
+    justify-content: center;
+
+    .header__description-title {
+      text-align: center;
+      font-size: 25px;
+      line-height: 35px;
+    }
+
+    .header__description-text {
+      margin: 20px 0 20px;
+    }
+
+    .leafs-img {
+      display: none;
+    }
+  }
+
+  .project__inner {
+    padding: 0 0 40px;
+
+    .project__inner-filter-list {
+      flex-wrap: wrap;
+
+    }
+  }
+
+  .project__inner-filter .project__inner-filter-btn + .project__inner-filter-btn {
+    margin-left: 10px;
+    justify-content: space-between;
+  }
+
+  .project__inner-portfolio {
+    justify-content: center;
+  }
+
+  .prices__inner {
+    flex-wrap: wrap;
+    justify-content: center;
+
+    .prices__inner-left-title {
+      text-align: center;
+    }
+
+
+  }
+}
+
+.prices__inner-right {
+  align-items: center;
+
+  .prices__inner-right-title {
+    margin-top: 20px;
+    text-align: center;
+  }
+
+  .prices__inner-img {
+    display: none;
+  }
+
+  .prices__inner-contact-us {
+    margin: 14px 0 0;
+  }
+}
+
+@media (max-width: 380px) {
+
+  .header__description {
+    width: 315px;
+
+    .header__description-title {
+      text-align: start;
+    }
+
+    .header__description-text {
+      font-size: 16px;
+      line-height: 25px;
+    }
+
+    .header__description-btn {
+      width: 100px;
+      height: 34px;
+      font-size: 10px;
+    }
+  }
+
+  .about__inner {
+    padding: 30px 0;
+  }
+
+  .about__inner-content {
+
+    .about__inner-title {
+      width: 100%;
+      padding-bottom: 20px;
+      font-size: 25px;
+      line-height: 33px;
+    }
+
+    .about__inner-text {
+      font-size: 15px;
+      line-height: 25px;
+    }
+  }
+
+  .about__img-houseplant {
+    width: 157px;
+  }
+
+  .project__inner {
+    padding: 30px 0;
+  }
+
+  .project__inner-filter {
+    .project__inner-title {
+      font-size: 25px;
+      line-height: 33px;
+    }
+
+    .project__inner-filter-list {
+      justify-content: flex-start;
+
+      .project__inner-filter-btn + .project__inner-filter-btn {
+        margin-left: 0;
+      }
+
+      #btn-lawn {
+        margin-left: 10px;
+      }
+
+      .project__inner-filter-btn {
+        width: 121px;
+        height: 35px;
+        margin-bottom: 10px;
+      }
+    }
+  }
+
+  .prices__inner {
+    padding: 25px 0 40px;
+  }
+
+  .prices__inner-left {
+
+    .prices__inner-left-title {
+      font-size: 25px;
+      line-height: 30px;
+      padding-bottom: 40px;
+    }
+  }
+
+  .prices__inner-lists-btn {
+
+    .description {
+      font-size: 15px;
+      line-height: 20px;
+    }
+  }
+
+  .prices__inner-right {
+
+    .prices__inner-right-title {
+      font-size: 20px;
+      line-height: 35px
+    }
+
+    .prices__inner-contact-us {
+      width: 121px;
+      height: 35px;
+    }
+  }
+  .contact__inner {
+    padding-top: 25px;
+
+    .contact__inner-title {
+      font-size: 25px;
+      line-height: 33px;
+      margin-bottom: 80px;
+    }
+
+    .contact__inner-city {
+      width: 300px;
+      margin: 0 0 132px;
+    }
+  }
+
+.footer__inner{
+  padding: 20px 0;
+}
+}
